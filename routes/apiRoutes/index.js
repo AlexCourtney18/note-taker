@@ -1,17 +1,17 @@
 const router = require('express').Router();
-const { filterByQuery, findById, createNewAnimal, validateAnimal } = require('../../lib/animals');
-const { animals } = require('../../data/animals');
+// const { filterByQuery, findById, createNewAnimal, validateAnimal } = require('../../lib/animals');
+const { notes } = require('../../db/db.json');
 
 router.get('/notes', (req, res) => {
-  let results = animals;
+  let results = notes;
   if (req.query) {
     results = filterByQuery(req.query, results);
   }
   res.json(results);
 });
 
-router.get('/animals/:id', (req, res) => {
-  const result = findById(req.params.id, animals);
+router.get('/notes/:id', (req, res) => {
+  const result = findById(req.params.id, notes);
   if (result) {
     res.json(result);
   } else {
