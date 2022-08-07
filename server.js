@@ -1,4 +1,6 @@
 const express = require('express');
+const {notes} = require('./data/notes.json');
+
 
 const PORT = process.env.PORT || 3001;
 const app = express();
