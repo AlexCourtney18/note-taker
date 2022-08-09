@@ -28,14 +28,14 @@ router.post('/notes', (req, res) => {
 });
 
 router.delete('/notes/:id', (req, res) => {
-  
   const note = deleteNote(req.params.id, notes);
   console.log(note, "FROM ROUTER");
-  if (note) {
-    res.json(note);
-  } else {
-    res.send(404);
-  }
+  res.send(note);
+  // if (note) {
+  //   res.json(note);
+  // } else {
+  //   res.send(404);
+  // }
 });
 
 module.exports = router;
