@@ -1,34 +1,14 @@
 {
   "notes": [
     {
-      "title": "Testing",
-      "text": "Test 1",
-      "id": "0"
+      "title": "yu",
+      "text": "yuyu",
+      "id": "833"
     },
     {
-      "title": "Test again",
-      "text": "Test 2",
+      "title": "rtrt",
+      "text": "rtrt",
       "id": "1"
-    },
-    {
-      "title": "Finish Challenge",
-      "text": "Finish the challenge",
-      "id": "2"
-    },
-    {
-      "title": "Test 4",
-      "text": "Test 444444",
-      "id": "3"
-    },
-    {
-      "title": "Watch Netflix",
-      "text": "Relax",
-      "id": "4"
-    },
-    {
-      "title": "Add Delete Function",
-      "text": "Add functionality to delete buttons",
-      "id": "5"
     }
   ]
 }

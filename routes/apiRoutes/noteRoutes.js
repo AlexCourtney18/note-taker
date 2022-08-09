@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { createNewNote, validateNote } = require('../../lib/notes.js');
+const { createNewNote, validateNote, deleteNote } = require('../../lib/notes.js');
 const { notes } = require('../../data/notes.json');
 
 router.get('/notes', (req, res) => {
@@ -17,13 +17,24 @@ router.get('/notes/:id', (req, res) => {
 });
 
 router.post('/notes', (req, res) => {
-  req.body.id = notes.length.toString();
+  req.body.id = Math.floor(Math.random() * 1000).toString();
 
   if (!validateNote(req.body)) {
     res.status(400).send('Error');
   } else {
     const note = createNewNote(req.body, notes);
     res.json(note);
+  }
+});
+
+router.delete('/notes/:id', (req, res) => {
+  
+  const note = deleteNote(req.params.id, notes);
+  console.log(note, "FROM ROUTER");
+  if (note) {
+    res.json(note);
+  } else {
+    res.send(404);
   }
 });
 
