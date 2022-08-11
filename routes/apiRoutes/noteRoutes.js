@@ -27,15 +27,15 @@ router.post('/notes', (req, res) => {
   }
 });
 
-router.delete('/notes/:id', (req, res) => {
-  const note = deleteNotes(req.params.id, notes);
-  console.log(note, "FROM ROUTER");
-  //res.send(note);
-  if (note) {
-    res.json(note);
-  } else {
-    res.send(404);
-  }
-});
+// router.delete('/notes/:id', (req, res) => {
+//   const note = deleteNotes(req.params.id, notes);
+//   console.log(note, "FROM ROUTER");
+//   //res.send(note);
+//   if (note) {
+//     res.json(note);
+//   } else {
+//     res.send(404);
+//   }
+// });
 
 module.exports = router;

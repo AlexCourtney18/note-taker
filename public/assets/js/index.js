@@ -1,3 +1,4 @@
+//const newArray = require('../../../lib/notes');
 let noteTitle;
 let noteText;
 let saveNoteBtn;
@@ -90,6 +91,7 @@ const handleNoteDelete = (e) => {
   }
 
   deleteNote(noteId).then(() => {
+    //getNotes(newArray);
     getAndRenderNotes();
     renderActiveNote();
   });
